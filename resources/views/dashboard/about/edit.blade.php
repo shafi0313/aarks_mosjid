@@ -27,32 +27,30 @@
             <div class="card">
                 <div class="card-body">
                     <div class="p-4 border rounded">
-                        <form action="{{ route('admin.banner.update') }}" method="post" class="row g-3 needs-validation" enctype="multipart/form-data">
+                        <form action="{{ route('admin.about.update') }}" method="post" class="row g-3 needs-validation" enctype="multipart/form-data">
                             @csrf @method('put')
                             <div class="col-md-12">
-                                <label for="banner_text" class="form-label required">Text </label>
-                                <textarea name="banner_text" id="summernote" class="form-control" required>@setting('banner_text') </textarea>
-                                @if ($errors->has('banner_text'))
-                                    <div class="alert alert-danger">{{ $errors->first('banner_text') }}</div>
+                                <label for="about_text" class="form-label required">Text </label>
+                                <textarea name="about_text" id="summernote" class="form-control" required>@setting('about_text') </textarea>
+                                @if ($errors->has('about_text'))
+                                    <div class="alert alert-danger">{{ $errors->first('about_text') }}</div>
                                 @endif
                             </div>
 
                             <div class="col-md-4">
-                                <img src="{{ imagePath('banner', Setting('banner_image')) }}" alt="">
+                                <img src="{{ imagePath('about', Setting('about_image')) }}" alt="" height="200px">
                             </div>
 
                             <div class="col-md-4">
-                                <label for="banner_image" class="form-label">Image 667x630</label>
-                                <input type="file" class="form-control" name="banner_image">
-                                @if ($errors->has('banner_image'))
-                                    <div class="alert alert-danger">{{ $errors->first('banner_image') }}</div>
+                                <label for="about_image" class="form-label">Image 426x553</label>
+                                <input type="file" class="form-control" name="about_image">
+                                @if ($errors->has('about_image'))
+                                    <div class="alert alert-danger">{{ $errors->first('about_image') }}</div>
                                 @endif
                             </div>
 
-                            <div class="col-12">
-                                <button class="btn btn-primary" type="submit">
-                                    Submit form
-                                </button>
+                            <div class="col-12 text-center">
+                                <button class="btn btn-primary" type="submit">Update</button>
                             </div>
                         </form>
                     </div>
@@ -66,7 +64,7 @@
             $(document).ready(function() {
                 $('#summernote').summernote({
                     // tabsize: 5,
-                    height: 200
+                    height: 400
                 });
             });
         </script>

@@ -33,6 +33,17 @@
         </a>
     </li>
     {{-- Banner End --}}
+    
+    {{-- About Start --}}
+    <li>
+        <a href="{{ route('admin.about.edit') }}">
+            <div class="parent-icon">
+                <ion-icon name="document-text-sharp"></ion-icon>
+            </div>
+            <div class="menu-title">About</div>
+        </a>
+    </li>
+    {{-- About End --}}
     <li>
         <a href="javascript:;" class="has-arrow">
             <div class="parent-icon">

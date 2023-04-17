@@ -38,15 +38,8 @@
                         <div class="lab-content">
                             <div class="header-title text-start m-0">
                                 <h5>About Our History</h5>
-                                <h2 class="mb-0">Islamic Center For Muslims To
-                                    Achieve Spiritual Goals</h2>
                             </div>
-                            <h5 class="my-4">Our Promise To Uphold The Trust Placed.</h5>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi molestias culpa
-                                reprehenderit delectus, ullam harum, voluptatum numquam ati nesciunt odit quis
-                                corrupti magni quam consequatur sint ipsum tecto exercitationem, illo quisquam.
-                                Reprehenderit ut placeat cum adantium nam magnam blanditiis sequi modi! Nesciunt,
-                                repudiandae eos eniam quod maxime corrupti eligendi ea in animi.</p>
+                            @setting('about_text')
                             <a href="#" class="lab-btn mt-4">Ask About Islam <i class="icofont-heart-alt"></i></a>
                         </div>
                     </div>
@@ -62,7 +55,7 @@
                                     <div class="about-circle"></div>
                                 </div>
                                 <div class="about-fg-img">
-                                    <img src="{{ asset('frontend/images/about/02.png') }}" alt="about-image">
+                                    <img src="{{ imagePath('about', setting('about_image')) }}" alt="about-image">
                                 </div>
                             </div>
                         </div>
