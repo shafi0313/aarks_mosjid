@@ -54,6 +54,8 @@
     <script src="{{ asset('frontend/js/isotope.pkgd.min.js') }}"></script>
     <script src="{{ asset('frontend/js/lightcase.js') }}"></script>
     <script src="{{ asset('frontend/js/functions.js') }}"></script>
+    
+    @stack('scripts')
 </body>
 
 </html>

@@ -22,16 +22,18 @@
     <link href="{{ asset('backend/css/style.css') }}" rel="stylesheet">
     <link href="{{ asset('backend/css/custom.css') }}" rel="stylesheet">
     <link href="{{ asset('backend/css/icons.css') }}" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-
     {{-- Theme Styles --}}
     <link href="{{ asset('backend/css/dark-theme.css') }}" rel="stylesheet" />
     <link href="{{ asset('backend/css/semi-dark.css') }}" rel="stylesheet" />
     <link href="{{ asset('backend/css/header-colors.css') }}" rel="stylesheet" />
-
+    
+    {{-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" /> --}}
+    
     <title>@yield('title') | {{ env('APP_NAME') }}</title>
     {{-- <title>@yield('title') | {{ config('app.locale')=='en'?setting('app_name'):setting('app_name_b') }}</title> --}}
 </head>
@@ -92,6 +94,7 @@
     <div id="ajax_modal_container"></div>
     {{-- JS Files --}}
     <script src="{{ asset('backend/js/jquery.min.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
     <script src="{{ asset('backend/plugins/simplebar/js/simplebar.min.js') }}"></script>
     <script src="{{ asset('backend/plugins/metismenu/js/metisMenu.min.js') }}"></script>
     <script src="{{ asset('backend/js/bootstrap.bundle.min.js') }}"></script>
@@ -102,6 +105,9 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     @include('dashboard.layout.includes.data_table_js')
     @include('sweetalert::alert')
+    {{-- <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script> --}}
+    {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.20/summernote.min.js" integrity="sha512-6rE6Bx6fCBpRXG/FWpQmvguMWDLWMQjPycXMr35Zx/HRD9nwySZswkkLksgyQcvrpYMx0FELLJVBvWFtubZhDQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> --}}
+    
     @stack('custom_scripts')
     {{-- Main JS --}}
     <script src="{{ asset('backend/js/main.js') }}"></script>

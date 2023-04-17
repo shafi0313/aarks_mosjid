@@ -23,6 +23,16 @@
             </li>
         </ul>
     </li>
+    {{-- Banner Start --}}
+    <li>
+        <a href="{{ route('admin.banner.edit') }}">
+            <div class="parent-icon">
+                <ion-icon name="document-text-sharp"></ion-icon>
+            </div>
+            <div class="menu-title">Banner</div>
+        </a>
+    </li>
+    {{-- Banner End --}}
     <li>
         <a href="javascript:;" class="has-arrow">
             <div class="parent-icon">

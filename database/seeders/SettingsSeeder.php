@@ -18,5 +18,11 @@ class SettingsSeeder extends Seeder
         Setting(['app_url'=> ''])->save();
         Setting(['app_description'=> ''])->save();
         Setting(['app_keyword'=> 'Al Khalim Mosjid Malaga'])->save();
+
+        Setting(['banner_text'=> 'Al Khalim Mosjid Malaga'])->save();
+        Setting(['banner_image'=> 'Al Khalim Mosjid Malaga'])->save();
+
+        Setting(['about_text'=> 'Al Khalim Mosjid Malaga'])->save();
+        Setting(['about_image'=> 'Al Khalim Mosjid Malaga'])->save();
     }
 }

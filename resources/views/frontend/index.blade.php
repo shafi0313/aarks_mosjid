@@ -8,7 +8,7 @@
                 <div class="banner-item">
                     <div class="banner-inner">
                         <div class="banner-thumb">
-                            <img src="{{ asset('frontend/images/banner/01.png') }}" alt="Banner-image">
+                            <img src="{{ imagePath('banner', setting('banner_image')) }}" alt="Banner-image">
                         </div>
                     </div>
                 </div>
@@ -17,10 +17,7 @@
                 <div class="banner-item">
                     <div class="banner-inner">
                         <div class="banner-content align-middle">
-                            <h1><span class="">And Allah Invites To <br class="d-none d-lg-block">
-                                    The </span>Home Of Peace</h1>
-                            <p>The most beloved actions to Allah are those performed consistently, even if they are
-                                few</p>
+                            @setting('banner_text')
                             <a href="#" class="lab-btn mt-3">Donate Now <i class="icofont-heart-alt"></i></a>
                         </div>
                     </div>

@@ -31,15 +31,15 @@
 }
 
 .no-sort::after {
-    display: none!important;
+    display: none !important;
 }
 .no-sort::before {
-    display: none!important;
+    display: none !important;
 }
 
 .no-sort {
-    pointer-events: none!important;
-    cursor: default!important;
+    pointer-events: none !important;
+    cursor: default !important;
 }
 
 ._btn {
@@ -54,4 +54,9 @@
 
 .footer {
     text-align: center !important;
+}
+
+/* Summer Note */
+.note-btn.dropdown-toggle:after {
+    content: none;
 }

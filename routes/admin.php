@@ -2,7 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AjaxController;
+use App\Http\Controllers\Admin\AboutController;
 use App\Http\Controllers\Admin\BlankController;
+use App\Http\Controllers\Admin\BannerController;
 use App\Http\Controllers\Admin\AdminUserController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Setting\AppDbBackupController;
@@ -40,4 +42,13 @@ Route::resource('/admin-user', AdminUserController::class,[
         'admin-user' => 'admin_user'
     ]
 ]);
+
+Route::controller(BannerController::class)->prefix('banner')->name('banner.')->group(function(){
+    Route::get('/edit', 'edit')->name('edit');
+    Route::put('/update', 'update')->name('update');
+});
+Route::controller(AboutController::class)->prefix('about')->name('about.')->group(function(){
+    Route::get('/edit', 'edit')->name('edit');
+    Route::put('/update', 'update')->name('update');
+});
 
