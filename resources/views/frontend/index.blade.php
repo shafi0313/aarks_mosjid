@@ -71,66 +71,22 @@
 <section class="feature-section bg-ash padding-tb">
     <div class="container">
         <div class="row justify-content-center">
+            @foreach ($features as $feature)
             <div class="col-lg-3 col-sm-6 col-12">
                 <div class="lab-item feature-item text-xs-center">
                     <div class="lab-inner">
                         <div class="lab-thumb">
-                            <img src="{{ asset('frontend/images/feature/01.png') }}" alt="feature-image">
+                            <img src="{{ imagePath('feature', $feature->icon) }}" alt="feature-image">
                         </div>
                         <div class="lab-content">
-                            <h5>Quran Studies</h5>
-                            <p>Lorem ipsum dolor sit, amet is consectetur adipisicing elit.Its expedita porro natus
-                            </p>
-                            <a href="#" class="text-btn">Sponsor Now!</a>
+                            <h5>{{ $feature->title }}</h5>
+                            {!! Str::limit($feature->description, 95, $end='...')  !!}
+                            <a href="{{ $feature->link }}" class="text-btn">{{ $feature->link_title }}</a>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-sm-6 col-12">
-                <div class="lab-item feature-item">
-                    <div class="lab-inner">
-                        <div class="lab-thumb">
-                            <img src="{{ asset('frontend/images/feature/02.png') }}" alt="feature-image">
-                        </div>
-                        <div class="lab-content">
-                            <h5>Islamic Classes</h5>
-                            <p>Lorem ipsum dolor sit, amet is consectetur adipisicing elit.Its expedita porro natus
-                            </p>
-                            <a href="#" class="text-btn">Donate Now!</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-sm-6 col-12">
-                <div class="lab-item feature-item">
-                    <div class="lab-inner">
-                        <div class="lab-thumb">
-                            <img src="{{ asset('frontend/images/feature/03.png') }}" alt="feature-image">
-                        </div>
-                        <div class="lab-content">
-                            <h5>Islamic Awareness</h5>
-                            <p>Lorem ipsum dolor sit, amet is consectetur adipisicing elit.Its expedita porro natus
-                            </p>
-                            <a href="#" class="text-btn">Join Us!</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-sm-6 col-12">
-                <div class="lab-item feature-item">
-                    <div class="lab-inner">
-                        <div class="lab-thumb">
-                            <img src="{{ asset('frontend/images/feature/04.png') }}" alt="feature-image">
-                        </div>
-                        <div class="lab-content">
-                            <h5>Islamic Services</h5>
-                            <p>Lorem ipsum dolor sit, amet is consectetur adipisicing elit.Its expedita porro natus
-                            </p>
-                            <a href="#" class="text-btn">Get Involved!</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            @endforeach 
         </div>
     </div>
 </section>
@@ -236,7 +192,7 @@
 {{-- <!-- Service section end here --> --}}
 
 {{-- <!-- Program section start Here --> --}}
-<section class="program-section padding-tb bg-img"
+{{-- <section class="program-section padding-tb bg-img"
     style="background: url({{ asset('frontend/images/program/bg.jpg') }}) rgba(5, 21, 57, 0.7); background-blend-mode: overlay;">
     <div class="container">
         <div class="row">
@@ -266,9 +222,9 @@
             </div>
         </div>
     </div>
-</section>
+</section> --}}
 {{-- <!-- upcoming program --> --}}
-<div class="upcoming-programs">
+{{-- <div class="upcoming-programs">
     <div class="container">
         <div class="row">
             <div class="col-xl-4">
@@ -373,7 +329,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> --}}
 {{-- <!-- Program section end Here --> --}}
 
 {{-- <!-- Faith section start here --> --}}
@@ -547,7 +503,7 @@
 {{-- <!-- Qoute Section end Here --> --}}
 
 {{-- <!-- Events Section start here --> --}}
-<section class="event-section padding-tb padding-b shape-4">
+{{-- <section class="event-section padding-tb padding-b shape-4">
     <div class="container">
         <div class="row">
             <div class="col-12">
@@ -660,6 +616,6 @@
             </div>
         </div>
     </div>
-</section>
+</section> --}}
 {{-- <!-- Events Section end here --> --}}
 @endsection

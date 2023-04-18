@@ -5,6 +5,7 @@ use App\Http\Controllers\AjaxController;
 use App\Http\Controllers\Admin\AboutController;
 use App\Http\Controllers\Admin\BlankController;
 use App\Http\Controllers\Admin\BannerController;
+use App\Http\Controllers\Admin\FeatureController;
 use App\Http\Controllers\Admin\AdminUserController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Setting\AppDbBackupController;
@@ -51,4 +52,5 @@ Route::controller(AboutController::class)->prefix('about')->name('about.')->grou
     Route::get('/edit', 'edit')->name('edit');
     Route::put('/update', 'update')->name('update');
 });
+Route::resource('/feature', FeatureController::class);
 

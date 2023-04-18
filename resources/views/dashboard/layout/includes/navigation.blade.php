@@ -44,6 +44,18 @@
         </a>
     </li>
     {{-- About End --}}
+    
+    {{-- Feature Start --}}
+    <li>
+        <a href="{{ route('admin.feature.index') }}">
+            <div class="parent-icon">
+                <ion-icon name="document-text-sharp"></ion-icon>
+            </div>
+            <div class="menu-title">Feature</div>
+        </a>
+    </li>
+    {{-- Feature End --}}
+
     <li>
         <a href="javascript:;" class="has-arrow">
             <div class="parent-icon">
