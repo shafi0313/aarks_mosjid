@@ -42,7 +42,7 @@
                         </div>
                         <div class="col-md-6">
                             <label for="icon" class="form-label required">Icon </label>
-                            <input type="file" name="icon" class="form-control">
+                            <input type="file" name="icon" class="form-control" required>
                             @if ($errors->has('icon'))
                                 <div class="alert alert-danger">{{ $errors->first('icon') }}</div>
                             @endif
