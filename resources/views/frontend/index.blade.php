@@ -192,7 +192,7 @@
 {{-- <!-- Service section end here --> --}}
 
 {{-- <!-- Program section start Here --> --}}
-{{-- <section class="program-section padding-tb bg-img"
+<section class="program-section padding-tb bg-img"
     style="background: url({{ asset('frontend/images/program/bg.jpg') }}) rgba(5, 21, 57, 0.7); background-blend-mode: overlay;">
     <div class="container">
         <div class="row">
@@ -222,9 +222,9 @@
             </div>
         </div>
     </div>
-</section> --}}
+</section>
 {{-- <!-- upcoming program --> --}}
-{{-- <div class="upcoming-programs">
+<div class="upcoming-programs">
     <div class="container">
         <div class="row">
             <div class="col-xl-4">
@@ -329,7 +329,7 @@
             </div>
         </div>
     </div>
-</div> --}}
+</div>
 {{-- <!-- Program section end Here --> --}}
 
 {{-- <!-- Faith section start here --> --}}
@@ -503,7 +503,7 @@
 {{-- <!-- Qoute Section end Here --> --}}
 
 {{-- <!-- Events Section start here --> --}}
-{{-- <section class="event-section padding-tb padding-b shape-4">
+<section class="event-section padding-tb padding-b shape-4">
     <div class="container">
         <div class="row">
             <div class="col-12">
@@ -616,6 +616,6 @@
             </div>
         </div>
     </div>
-</section> --}}
+</section>
 {{-- <!-- Events Section end here --> --}}
 @endsection
